@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WhatToWear</string>
+    <string name="contactsText">Прогноз</string>
+    <string name="mainText">Главная</string>
+    <string name="GGeniusText">Настройки</string>
+    <string name="logoOfApp1">What to wear</string>
+    <string name="Wardrobe">Гардероб</string>
+    <string name="cityText">Погода в Калуге:</string>
+    <string name="temperature">Тепмература:</string>
+    <string name="celsius">-0°C</string>
+    <string name="infoTemperature">снег</string>
+    <string name="upClothes">Верхняя одежда</string>
+    <string name="forUpClothes">Куртка, кофта</string>
+    <string name="downClothes">Нижняя одежда</string>
+    <string name="forDownClothes">Джинсы</string>
+    <string name="Shoes">Обувь</string>
+    <string name="forShoes">Ботинки, носки</string>
+    <string name="Accessories">Акссесуары</string>
+    <string name="forAccessories">Перчатки, шарф</string>
+    <string name="rectangleText">Введите город</string>
+    <string name="galochka">✔</string>
+    <string name="no_user_input">Введите текст</string>
+    <string name="settings">Настройки</string>
+    <string name="forecast">Прогноз на 5 дней</string>
+
+</resources>

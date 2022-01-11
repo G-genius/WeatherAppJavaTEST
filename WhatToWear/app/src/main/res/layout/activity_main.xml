@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBgColor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="412dp"
+        android:layout_height="59dp"
+        android:background="@color/asideBgColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/main_button"
+            android:layout_width="133dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="@string/mainText"
+            android:textColor="@color/blacks"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/contacts"
+            android:layout_width="133dp"
+            android:layout_height="65dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:onClick="openForecast"
+            android:text="@string/contactsText"
+            android:textColor="@color/blacks"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/GGenius"
+            app:layout_constraintStart_toEndOf="@+id/main_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/GGenius"
+            android:layout_width="133dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="6dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:onClick="openSettings"
+            android:text="@string/GGeniusText"
+            android:textColor="@color/blacks"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/logoOfApp1"
+        android:textColor="@color/blacks"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/logoOfApp1"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/categoryRecycler"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/ic_filter__1_" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecycler"
+        android:layout_width="272dp"
+        android:layout_height="26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/logoOfApp1"
+            app:srcCompat="@drawable/ic_plate" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/cityName"
+            android:textSize="30dp"
+            android:text="Поиск города . . ."
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/temperature"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:translationX="10dp"
+            android:translationY="50dp" />
+
+        <TextView
+            android:id="@+id/result_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:text="@string/celsius"
+            android:translationX="15dp"
+            android:translationY="80dp" />
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:translationX="90dp"
+            android:translationY="80dp"
+            android:src="@drawable/ic_cyclone_weather_world_time_icon_194253"/>
+
+        <TextView
+            android:id="@+id/feels_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:translationX="15dp"
+            android:translationY="135dp" />
+
+        <TextView
+            android:id="@+id/infoTemperature"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:translationX="175dp"
+            android:translationY="50dp" />
+
+        <TextView
+            android:id="@+id/Humidity"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:translationX="200dp"
+            android:translationY="80dp" />
+
+        <TextView
+            android:id="@+id/Wind"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:translationX="200dp"
+            android:translationY="110dp" />
+
+        <TextView
+            android:id="@+id/Pressure"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:translationX="200dp"
+            android:translationY="140dp" />
+
+        <ImageView
+            android:id="@+id/water"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/logoOfApp1"
+            android:translationX="175dp"
+            android:translationY="80dp"
+            app:srcCompat="@drawable/ic_water_svgrepo_com" />
+
+        <ImageView
+            android:id="@+id/wind"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/logoOfApp1"
+            android:translationX="175dp"
+            android:translationY="110dp"
+            app:srcCompat="@drawable/ic_wind_svgrepo_com" />
+
+        <ImageView
+            android:id="@+id/compass"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/logoOfApp1"
+            android:translationX="175dp"
+            android:translationY="140dp"
+            app:srcCompat="@drawable/ic_compass_svgrepo_com" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/logoOfApp1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clothesRecycler"
+        android:layout_width="326dp"
+        android:layout_height="358dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-15dp"
+        android:translationX="20dp"
+        android:translationY="180dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
